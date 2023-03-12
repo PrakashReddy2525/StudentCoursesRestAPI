@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'MAVEN_8' }
+    agent { label 'docker' }
     triggers { 
         pollSCM('* * * * *')
     }
