@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'MAVEN_8' }
+    agent { label 'docker' }
     triggers { 
         pollSCM('* * * * *')
     }
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'docker image build -t prakashreddy2525/spc:latest .'
+                sh 'sudo docker image build -t prakashreddy2525/spc:latest .'
             }
         }
         stage('scan and push') {
