@@ -15,7 +15,7 @@ pipeline {
                 sh 'sudo docker image build -t prakashreddy2525/spc:latest .'
             }
         }
-        stage('scan and push') {
+        stage('scan and push') {       
             steps {
                 sh 'echo docker scan prakashreddy2525/spc:latest'
                 sh 'docker image push prakashreddy2525/spc:latest'
